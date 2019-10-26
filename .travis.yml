@@ -1,8 +1,13 @@
 jobs:
   include:
     - stage: "Documentation"
-      julia: 1.2
-      os: linux
+      language: julia
+      os:
+        - linux
+      julia:
+        - 1.2
+      notifications:
+        email: false
       script:
         - julia --project=docs/ -e 'using Pkg; Pkg.develop(PackageSpec(path=pwd()));
                                                Pkg.instantiate()'
