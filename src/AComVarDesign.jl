@@ -5,9 +5,9 @@ using LinearAlgebra
 using StatsBase
 using Test
 
-include("src/Design.jl")
-include("src/design_navigation_functions.jl")
-include("src/optGA.jl")
+include("Design.jl")
+include("design_navigation_functions.jl")
+include("optGA.jl")
 
 export Design, optGA
 
