@@ -1,7 +1,14 @@
 """
     Design
 
-Stores results
+Structure that stores the output from the genetic algorithm. Variance ratio can
+be examined using min_var / max_var or by looking at variance_array.
+
+* `design_matrix` is a 2 dimensional array of integers with the main effects
+* `nFactor` is a 1 dimensional array. This first element is the number of 2-level factors and the second element is the number of 3-level factors
+* `nInteraction` number of interactions in the models under consideration (k in paper)
+* `variance_array` Array storing the variance of each model under consideration.
+Can be matched up to `interaction_matrix`
 """
 
 struct Design
